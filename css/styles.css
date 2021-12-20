@@ -36,6 +36,7 @@ label {
 
 input {
   width: 100%;
+  margin-bottom: 30px;
 }
 
 textarea {
@@ -54,4 +55,13 @@ button {
 
 .button {
   text-align: right;
+  padding-top: 50px;
+}
+
+input:focus {
+  outline-color: rgb(252, 74, 74);
+}
+
+textarea:focus {
+  outline-color: rgb(252, 74, 74);
 }
