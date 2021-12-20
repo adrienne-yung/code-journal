@@ -11,7 +11,7 @@ header {
 }
 
 body {
-  background-color: black;
+  background-color: rgb(240, 240, 240);
 }
 
 img {
@@ -25,12 +25,15 @@ form {
 
 h1 {
   font-size: 45px;
-  color: white;
 }
 
 label {
-  color: white;
   font-size: 25px;
+  font-weight: bold;
+}
+
+.label-padding {
+  padding-bottom: 10px;
 }
 
 input {
@@ -54,7 +57,7 @@ button {
 
 .button {
   text-align: right;
-  padding-top: 50px;
+  padding-top: 25px;
 }
 
 input:focus {
