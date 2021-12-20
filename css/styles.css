@@ -33,7 +33,11 @@ label {
 }
 
 .label-padding {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.notes-padding {
+  margin-top: 35px;
 }
 
 input {
@@ -49,7 +53,7 @@ textarea {
 button {
   background-color: rgb(252, 74, 74);
   border-style: none;
-  border-radius: 6%;
+  border-radius: 6px;
   padding: 5px 25px;
   color: white;
   font-size: 15px;
@@ -57,7 +61,7 @@ button {
 
 .button {
   text-align: right;
-  padding-top: 25px;
+  padding-top: 20px;
 }
 
 input:focus {
