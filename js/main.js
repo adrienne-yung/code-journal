@@ -20,7 +20,7 @@ function submitHandler(event) {
   };
   event.preventDefault();
   data.nextEntryId++;
-  data.entries.push(entryValues);
+  data.entries.unshift(entryValues);
   var entry = renderEntry(entryValues);
   unorderedList.prepend(entry);
   $image.setAttribute('src', './images/placeholder-image-square.jpg');
