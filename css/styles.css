@@ -27,6 +27,11 @@ h1 {
   font-size: 45px;
 }
 
+h4 {
+  font-size: 30px;
+  margin: 0;
+}
+
 label {
   font-size: 25px;
   font-weight: bold;
@@ -57,7 +62,7 @@ textarea {
   font-size: 15px;
 }
 
-button {
+.save-button {
   background-color: rgb(252, 74, 74);
   border-style: none;
   border-radius: 6px;
@@ -71,10 +76,60 @@ button {
   padding-top: 20px;
 }
 
+.new-button {
+  background-color: rgb(252, 74, 74);
+  border-style: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 15px;
+  padding: 8px 15px;
+}
+
 input:focus {
   outline-color: rgb(252, 74, 74);
 }
 
 textarea:focus {
   outline-color: rgb(252, 74, 74);
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 50px;
+}
+
+.no-entries-paragraph {
+  font-size: 30px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+li {
+  margin-bottom: 30px;
+}
+
+.entry-margin {
+  padding-top: 50px;
+}
+
+.display-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  cursor: pointer;
+  margin-left: 40px;
+  font-size: 21px;
 }
