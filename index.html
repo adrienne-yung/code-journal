@@ -20,13 +20,13 @@
     <div class="container">
       <div class="row">
         <div class="column-full">
-          <div>Code Journal</div>
+          <span>Code Journal</span><a data-view="entries">Entries</a>
         </div>
       </div>
     </div>
   </header>
   <main>
-    <form id="entry-form" data-view="entry-form">
+    <form id="entry-form" data-view="entry-form" class="view">
       <div class="container">
         <div class="row">
           <div class="column-full">
@@ -69,72 +69,29 @@
         <div class="row">
           <div class="column-full">
             <div class="button">
-              <button>SAVE</button>
+              <button class="save-button">SAVE</button>
             </div>
           </div>
         </div>
       </div>
     </form>
-    <div data-view="entries">
+    <div data-view="entries" class="view">
       <div class="container">
         <div class="row">
           <div class="column-full">
             <div class="display-flex">
               <h2>Entries</h2>
-              <button class="new-button">NEW</button>
+              <button class="new-button" data-view="entry-form">NEW</button>
             </div>
             <div>
-              <p class="no-entries-paragraph text-align-center">No Entries Listed</p>
+              <p class="no-entries-paragraph text-align-center hidden">No Entries Listed</p>
             </div>
           </div>
-          <ul>
-            <li>
-              <div class="container">
-                <div class="row entry-margin">
-                  <div class="column-half">
-                    <img src="images/placeholder-image-square.jpg">
-                  </div>
-                  <div class="column-half">
-                    <h4>Dummy Data Title</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere debitis ex dolore laudantium voluptates odio mollitia, temporibus tempora nobis sint, labore, tenetur facilis possimus provident earum. Quos optio non esse?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis iure deleniti quidem, cumque reiciendis itaque voluptates nesciunt neque quibusdam at voluptatem qui ad ab inventore atque quisquam optio earum cum.</p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="container">
-                <div class="row entry-margin">
-                  <div class="column-half">
-                    <img src="images/placeholder-image-square.jpg">
-                  </div>
-                  <div class="column-half">
-                    <h4>Dummy Data Title</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere debitis ex dolore laudantium voluptates odio
-                      mollitia, temporibus tempora nobis sint, labore, tenetur facilis possimus provident earum. Quos optio non esse?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime beatae iure nulla rerum qui vitae ducimus, sunt autem corrupti, eligendi nisi nam, unde quis quibusdam vero quisquam reiciendis ut temporibus.</p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="container">
-                <div class="row entry-margin">
-                  <div class="column-half">
-                    <img src="images/placeholder-image-square.jpg">
-                  </div>
-                  <div class="column-half">
-                    <h4>Dummy Data Title</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere debitis ex dolore laudantium voluptates odio
-                      mollitia, temporibus tempora nobis sint, labore, tenetur facilis possimus provident earum. Quos optio non esse?
-                    </p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut aliquam asperiores amet dicta earum numquam repellendus tenetur voluptatibus, at voluptatum doloremque quos, corrupti eveniet! Asperiores nostrum sit impedit. Quaerat, cupiditate.</p>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <div class="text-align-right">
+            <ul>
+
+            </ul>
+          </div>
         </div>
       </div>
     </div>
