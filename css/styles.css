@@ -69,6 +69,7 @@ textarea {
   padding: 5px 25px;
   color: white;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .button {
@@ -83,6 +84,7 @@ textarea {
   color: white;
   font-size: 15px;
   padding: 8px 15px;
+  cursor: pointer;
 }
 
 input:focus {
@@ -132,4 +134,22 @@ a {
   cursor: pointer;
   margin-left: 40px;
   font-size: 21px;
+}
+
+.display-flex-icon {
+  display: flex;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+i {
+  color: rgb(252, 74, 74);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.icon-padding {
+  padding-top: 10px;
 }
