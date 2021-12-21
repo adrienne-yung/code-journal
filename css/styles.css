@@ -46,6 +46,7 @@ input {
   height: 40px;
   border-radius: 5px;
   border: 1px solid black;
+  font-size: 15px;
 }
 
 textarea {
@@ -53,6 +54,7 @@ textarea {
   height: 150px;
   border-radius: 5px;
   border: 1px solid black;
+  font-size: 15px;
 }
 
 button {
