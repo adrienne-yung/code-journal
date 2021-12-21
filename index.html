@@ -13,11 +13,68 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
+    <div class="container">
+      <div class="row">
+        <div class="column-full">
+          <div>Code Journal</div>
+        </div>
+      </div>
+    </div>
   </header>
   <main>
+    <form id="entry-form" data-view="entry-form">
+      <div class="container">
+        <div class="row">
+          <div class="column-full">
+            <div>
+              <h1>New Entry</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column-half">
+            <div>
+              <img class="placeholder-image" src="images/placeholder-image-square.jpg">
+            </div>
+          </div>
+          <div class="column-half">
+            <div class="label-padding">
+              <label for="title">Title</label>
+            </div>
+            <div>
+              <input type="text" id="title" name="title" required>
+            </div>
+            <div class="label-padding">
+              <label for="photo">Photo URL</label>
+            </div>
+            <div>
+              <input type="url" id="photo" name="photo" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column-full">
+            <div class="label-padding notes-padding">
+              <label for="notes">Notes</label>
+            </div>
+            <div>
+              <textarea id="notes" name="notes" required></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column-full">
+            <div class="button">
+              <button>SAVE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
