@@ -136,7 +136,7 @@ function editIconHandler(event) {
         $notes.value = data.entries[i].notes;
         $image.setAttribute('src', $inputPhotoUrl.value);
       }
-      switchViews('entry-form');
     }
+    switchViews('entry-form');
   }
 }
