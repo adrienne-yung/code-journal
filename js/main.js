@@ -11,13 +11,13 @@ function inputPhoto(event) {
 var $notes = document.querySelector('.notes');
 var $title = document.querySelector('.title');
 var $form = document.querySelector('#entry-form');
-var $unorderedList = document.querySelector('ul');
 $form.addEventListener('submit', submitHandler);
 function submitHandler(event) {
+  event.preventDefault();
   if (data.editing === null) {
     var entryValues = {
       entryId: data.nextEntryId,
-      photoURL: $form.photo.value,
+      photoURL: $inputPhotoUrl.value,
       title: $title.value,
       notes: $notes.value
     };
@@ -28,7 +28,7 @@ function submitHandler(event) {
   } else {
     var entryValuesEdit = {
       entryId: data.editing,
-      photoURL: $form.photo.value,
+      photoURL: $inputPhotoUrl.value,
       title: $title.value,
       notes: $notes.value
     };
@@ -43,8 +43,8 @@ function submitHandler(event) {
         $listOfEntries[j].replaceWith(renderEntry(entryValuesEdit));
       }
     }
+    data.editing = null;
   }
-  event.preventDefault();
   $image.setAttribute('src', './images/placeholder-image-square.jpg');
   $form.reset();
   switchViews('entries');
@@ -53,6 +53,7 @@ function submitHandler(event) {
 function renderEntry(entry) {
   var list = document.createElement('li');
   var divOne = document.createElement('div');
+  list.setAttribute('data-entry-id', entry.entryId);
   divOne.setAttribute('class', 'row');
   list.appendChild(divOne);
   var divTwo = document.createElement('div');
@@ -81,7 +82,7 @@ function renderEntry(entry) {
   return list;
 }
 
-// var $unorderedList = document.querySelector('ul');
+var $unorderedList = document.querySelector('ul');
 window.addEventListener('DOMContentLoaded', newEntryUpload);
 function newEntryUpload(event) {
   for (var i = 0; i < data.entries.length; i++) {
@@ -130,12 +131,12 @@ function editIconHandler(event) {
     data.editing = grabEditEntryId;
     for (var i = 0; i < data.entries.length; i++) {
       if (grabEditEntryId === data.entries[i].entryId) {
-        $form.title.value = data.entries[i].title;
+        $title.value = data.entries[i].title;
         $inputPhotoUrl.value = data.entries[i].photoURL;
-        $form.notes.value = data.entries[i].notes;
+        $notes.value = data.entries[i].notes;
         $image.setAttribute('src', $inputPhotoUrl.value);
-        switchViews('entry-form');
       }
+      switchViews('entry-form');
     }
   }
 }
