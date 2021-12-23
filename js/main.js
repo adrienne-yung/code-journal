@@ -115,7 +115,7 @@ function noEntriesListed() {
   }
 }
 
-var $a = document.querySelector('a');
+var $a = document.querySelector('.header-anchor');
 var $newButton = document.querySelector('.new-button');
 $a.addEventListener('click', grabView);
 $newButton.addEventListener('click', grabView);
@@ -124,6 +124,7 @@ function grabView(event) {
   $deleteButton.className = 'delete-button visibility-none';
   switchViews(displayView);
 }
+
 var $headerOne = document.querySelector('h1');
 $unorderedList.addEventListener('click', editIconHandler);
 function editIconHandler(event) {
@@ -170,6 +171,7 @@ function clickConfirmButton(event) {
       }
     }
   }
+  data.editing = null;
   switchViews('entries');
 }
 
