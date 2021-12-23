@@ -125,6 +125,7 @@ function grabView(event) {
   switchViews(displayView);
 }
 
+var $headerOne = document.querySelector('h1');
 $unorderedList.addEventListener('click', editIconHandler);
 function editIconHandler(event) {
   if (event.target.tagName === 'I') {
@@ -133,6 +134,7 @@ function editIconHandler(event) {
     $deleteButton.className = 'delete-button';
     for (var i = 0; i < data.entries.length; i++) {
       if (grabEditEntryId === data.entries[i].entryId) {
+        $headerOne.textContent = 'Edit Entry';
         $title.value = data.entries[i].title;
         $inputPhotoUrl.value = data.entries[i].photoURL;
         $notes.value = data.entries[i].notes;
@@ -164,7 +166,7 @@ function clickConfirmButton(event) {
       if (data.entries[i].entryId === data.editing) {
         data.entries.splice(data.entries[i].entryId);
         $modalWindow.className = 'modal-window hidden';
-        var $toDeleteEntry = document.querySelector('li[data-entry-id={data.editing}');
+        var $toDeleteEntry = document.querySelector('li[data-entry-id="' + data.editing + '"]');
         $toDeleteEntry.remove();
       }
     }

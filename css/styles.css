@@ -169,6 +169,7 @@ i {
   border-style: none;
   padding: 8px 10px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .cancel-button {
@@ -177,10 +178,12 @@ i {
   border-style: none;
   padding: 8px 10px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .modal-header {
   text-align: center;
+  font-size: 25px;
 }
 
 .modal-content {
@@ -194,13 +197,12 @@ i {
   margin: 15% auto;
 }
 
-.modal-button-padding {
-  padding: 0 4rem;
-  width: 100%;
+h5 {
+  font-size: 75%;
 }
 
-.modal-top-padding {
-  margin-top: 40px;
+.modal-button-padding {
+  width: 75%;
 }
 
 .position-relative {
