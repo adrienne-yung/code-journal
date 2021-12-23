@@ -160,6 +160,12 @@ i {
   color: red;
   text-decoration: underline;
   cursor: pointer;
+  border-style: none;
+}
+
+.button-width {
+  width: 80%;
+  transition: width ease 1s;
 }
 
 .confirm-button {
@@ -170,6 +176,7 @@ i {
   padding: 8px 10px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 10px;
 }
 
 .cancel-button {
@@ -179,15 +186,17 @@ i {
   padding: 8px 10px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 10px;
 }
 
 .modal-header {
   text-align: center;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .modal-content {
   background-color: white;
+  min-width: 340px;
   width: 50%;
   height: 250px;
   display: flex;
@@ -195,14 +204,7 @@ i {
   justify-content: center;
   align-items: center;
   margin: 15% auto;
-}
-
-h5 {
-  font-size: 75%;
-}
-
-.modal-button-padding {
-  width: 75%;
+  border-radius: 5px;
 }
 
 .position-relative {
@@ -220,4 +222,19 @@ h5 {
 
 .visibility-none {
   visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-header {
+    font-size: 28px;
+  }
+
+  .cancel-button,
+  .confirm-button {
+    font-size: 13px;
+  }
+
+  .button-width {
+    width: 70%;
+  }
 }

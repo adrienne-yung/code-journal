@@ -124,7 +124,6 @@ function grabView(event) {
   $deleteButton.className = 'delete-button visibility-none';
   switchViews(displayView);
 }
-
 var $headerOne = document.querySelector('h1');
 $unorderedList.addEventListener('click', editIconHandler);
 function editIconHandler(event) {
@@ -164,14 +163,13 @@ function clickConfirmButton(event) {
   if (event.target.matches('.confirm-button')) {
     for (var i = 0; i < data.entries.length; i++) {
       if (data.entries[i].entryId === data.editing) {
-        data.entries.splice(data.entries[i].entryId);
+        data.entries.splice(i, 1);
         $modalWindow.className = 'modal-window hidden';
         var $toDeleteEntry = document.querySelector('li[data-entry-id="' + data.editing + '"]');
         $toDeleteEntry.remove();
       }
     }
   }
-  data.editing = null;
   switchViews('entries');
 }
 
