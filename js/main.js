@@ -115,22 +115,26 @@ function noEntriesListed() {
   }
 }
 
-var $a = document.querySelector('a');
+var $a = document.querySelector('.header-anchor');
 var $newButton = document.querySelector('.new-button');
 $a.addEventListener('click', grabView);
 $newButton.addEventListener('click', grabView);
 function grabView(event) {
   var displayView = event.target.getAttribute('data-view');
+  $deleteButton.className = 'delete-button visibility-none';
   switchViews(displayView);
 }
 
+var $headerOne = document.querySelector('h1');
 $unorderedList.addEventListener('click', editIconHandler);
 function editIconHandler(event) {
   if (event.target.tagName === 'I') {
     var grabEditEntryId = parseInt(event.target.closest('li').getAttribute('data-entry-id'));
     data.editing = grabEditEntryId;
+    $deleteButton.className = 'delete-button';
     for (var i = 0; i < data.entries.length; i++) {
       if (grabEditEntryId === data.entries[i].entryId) {
+        $headerOne.textContent = 'Edit Entry';
         $title.value = data.entries[i].title;
         $inputPhotoUrl.value = data.entries[i].photoURL;
         $notes.value = data.entries[i].notes;
@@ -138,5 +142,43 @@ function editIconHandler(event) {
       }
     }
     switchViews('entry-form');
+  }
+}
+
+var $modalWindow = document.querySelector('.modal-window');
+var $deleteButton = document.querySelector('.delete-button');
+var $confirmButton = document.querySelector('.confirm-button');
+var $cancelButton = document.querySelector('.cancel-button');
+$deleteButton.addEventListener('click', clickDeleteButton);
+$confirmButton.addEventListener('click', clickConfirmButton);
+$cancelButton.addEventListener('click', clickCancelButton);
+function clickDeleteButton(event) {
+  if (event.target.matches('.delete-button')) {
+    $modalWindow.className = 'modal-window';
+  } else {
+    $modalWindow.className = 'modal-window hidden';
+  }
+}
+
+function clickConfirmButton(event) {
+  if (event.target.matches('.confirm-button')) {
+    for (var i = 0; i < data.entries.length; i++) {
+      if (data.entries[i].entryId === data.editing) {
+        data.entries.splice(i, 1);
+        $modalWindow.className = 'modal-window hidden';
+        var $toDeleteEntry = document.querySelector('li[data-entry-id="' + data.editing + '"]');
+        $toDeleteEntry.remove();
+      }
+    }
+  }
+  $form.reset();
+  switchViews('entries');
+}
+
+function clickCancelButton(event) {
+  if (event.target.matches('.cancel-button')) {
+    $modalWindow.className = 'modal-window hidden';
+  } else {
+    $modalWindow.className = 'modal-window';
   }
 }
