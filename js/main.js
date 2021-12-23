@@ -171,7 +171,7 @@ function clickConfirmButton(event) {
       }
     }
   }
-  data.editing = null;
+  $form.reset();
   switchViews('entries');
 }
 
